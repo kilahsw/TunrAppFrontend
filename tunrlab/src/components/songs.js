@@ -9,6 +9,15 @@ const Songs = (props) => {
                     <div>
                         <p>{song.title} by {song.artist}</p>
                         <p>{song.time}</p>
+                        <button
+                            onClick={() => {
+                                props.favorites(song);
+                            }}>
+                            Favorite
+                        </button>
+                        <button onClick={() => {
+                            props.deleteSong(song)
+                        }}>Delete</button>
                     </div>
                 ))}
             </>)
