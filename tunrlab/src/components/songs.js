@@ -1,45 +1,70 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 const Songs = (props) => {
-
-    const [songs, setSongs] = useState([]);
-    const getSongs = () => {
-        fetch("http://localhost:3000/songs")
-            .then(res => res.json())
-            .then((res) => {
-                setSongs(res.songs);
-                console.log(res)
-            })
-    }
-    useEffect(() => {
-        getSongs()
-    }, [])
-
+    const { songs } = props;
     const playList = () => {
-        if (songs.length > 0) {
-            return songs.map((song) => {
-                return (
+        return (
+            <>
+                {songs.map((song) => (
                     <div>
-                        <h6>
-                            {song.title}:{song.artist}
-                        </h6>
+                        <p>{song.title} by {song.artist}</p>
+                        <p>{song.time}</p>
                     </div>
-                );
-            });
-        } else {
-            return "...loading"
-        }
+                ))}
+            </>)
+
     }
+    return songs.length > 0 ? playList() : <h3>...loading</h3>
 
-    return (
-        <>
-            <h1>TUNR.</h1>
-            <p>FOR ALL YOUR PLAYLIST NEEDS</p>
-            <h1>PLAYLIST 1</h1>
-            {playList()}
-
-        </>
-    );
 }
 
 export default Songs
+
+
+  // const [songs, setSongs] = useState([]);
+
+    // const url = 'http://localhost:3000/songs'
+
+    // const getSongs = () => {
+    //     fetch(url)
+    //         .then(res => res.json())
+    //         .then((res) => {
+    //             setSongs(res.songs);
+    //             console.log(res)
+    //         })
+    // }
+    // useEffect(() => {
+    //     getSongs()
+    // }, [])
+
+//     //<h1>TUNR.</h1>
+//     < p > FOR ALL YOUR PLAYLIST NEEDS</p >
+//         <h1>PLAYLIST 1</h1>
+// { playList() }
+// <h1>Add New Song To Playlist</h1>
+
+ // if (songs.length > 0) {
+        //     return songs.map((song) => {
+        //         return (
+        //             <div>
+        //                 <h6>
+        //                     {song.title}:{song.artist}
+        //                 </h6>
+        //             </div>
+        //         );
+        //     });
+
+        // } else {
+        //     return "...loading"
+        // }
+
+        // return (
+    //     <>
+    //         <h1>TUNR.</h1>
+    //         <p>FOR ALL YOUR PLAYLIST NEEDS</p>
+    //         <h1>PLAYLIST 1</h1>
+    //         {playList()}
+    //         <h1>Add New Song To Playlist</h1>
+
+    //     </>
+    // );
