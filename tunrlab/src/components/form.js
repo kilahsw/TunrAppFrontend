@@ -15,7 +15,7 @@ const Form = (props) => {
     };
     return (
         <form onSubmit={handleSubmit}>
-            <p>Title</p>
+            <p>Song Title</p>
             <input
                 type="text"
                 name="title"
@@ -38,7 +38,7 @@ const Form = (props) => {
             />
             <br />
             <br />
-            <input style={{ color: 'pink', fontWeight: 'bold', backgroundColor: 'gray', border: 'gray' }} type="submit" value="Add Song" />
+            <input style={{ color: 'white', fontWeight: 'bold', backgroundColor: 'hotpink', border: 'hotpink' }} type="submit" value="Add Song" />
         </form>
     );
 };

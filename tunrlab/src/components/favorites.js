@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Favorites (props) {
+function Favorites(props) {
     console.log("these are favorites")
     return (
         <div>
@@ -8,7 +8,6 @@ function Favorites (props) {
                 return (
                     <>
                         <p>{favorite.title}</p>
-                        <p>{favorite.artist}</p>
                     </>
                 )
             })}

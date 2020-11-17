@@ -7,16 +7,17 @@ const Songs = (props) => {
             <>
                 {songs.map((song) => (
                     <div>
-                        <p style={{ fontWeight: 'bold', color: 'green' }}>{song.title} by {song.artist}</p>
-                        <p>{song.time}</p>
-                        <button style={{ color: 'pink', fontWeight: 'bold', backgroundColor: 'gray', border: 'gray' }}
+                        <p style={{ fontWeight: 'bold', color: 'white' }}>{song.title} by {song.artist}</p>
+                        <p style={{color: 'white'}}>{song.time}</p>
+                        <button style={{ color: 'white', fontWeight: 'bold', backgroundColor: 'hotpink' }}
                             onClick={() => {
                                 props.favorites(song);
                             }}>
                             Favorite
                         </button>
                         <br />
-                        <button style={{ color: 'pink', fontWeight: 'bold', backgroundColor: 'gray', border: 'gray' }} onClick={() => {
+                        <button style={{ color: 'white', fontWeight: 'bold', backgroundColor: 'hotpink' }} 
+                        onClick={() => {
                             props.deleteSong(song)
                         }}>Delete</button>
                     </div>
@@ -29,52 +30,3 @@ const Songs = (props) => {
 }
 
 export default Songs
-
-
-  // const [songs, setSongs] = useState([]);
-
-    // const url = 'http://localhost:3000/songs'
-
-    // const getSongs = () => {
-    //     fetch(url)
-    //         .then(res => res.json())
-    //         .then((res) => {
-    //             setSongs(res.songs);
-    //             console.log(res)
-    //         })
-    // }
-    // useEffect(() => {
-    //     getSongs()
-    // }, [])
-
-//     //<h1>TUNR.</h1>
-//     < p > FOR ALL YOUR PLAYLIST NEEDS</p >
-//         <h1>PLAYLIST 1</h1>
-// { playList() }
-// <h1>Add New Song To Playlist</h1>
-
- // if (songs.length > 0) {
-        //     return songs.map((song) => {
-        //         return (
-        //             <div>
-        //                 <h6>
-        //                     {song.title}:{song.artist}
-        //                 </h6>
-        //             </div>
-        //         );
-        //     });
-
-        // } else {
-        //     return "...loading"
-        // }
-
-        // return (
-    //     <>
-    //         <h1>TUNR.</h1>
-    //         <p>FOR ALL YOUR PLAYLIST NEEDS</p>
-    //         <h1>PLAYLIST 1</h1>
-    //         {playList()}
-    //         <h1>Add New Song To Playlist</h1>
-
-    //     </>
-    // );

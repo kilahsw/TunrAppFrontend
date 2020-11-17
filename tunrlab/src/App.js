@@ -57,8 +57,8 @@ function App() {
     <div className="App">
 
       <h1>TUNR.</h1>
-      <h3>FOR ALL YOUR PLAYLIST NEEDS</h3>
-      <h1>PLAYLIST</h1>
+      <h4>For All Your Playlist Needs</h4>
+      <h3>PLAYLIST</h3>
       <Switch>
         <Route
           exact path='/'
@@ -77,7 +77,7 @@ function App() {
           <Favorites favorites={favorites} />
         </Route>
       </Switch>
-      <h1>Add New Song To Playlist</h1>
+      <h3>Add New Song To Playlist</h3>
       <Switch>
         <Route
           exact path='/'
