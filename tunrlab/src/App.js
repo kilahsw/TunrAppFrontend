@@ -57,7 +57,7 @@ function App() {
     <div className="App">
 
       <h1>TUNR.</h1>
-      <p>FOR ALL YOUR PLAYLIST NEEDS</p>
+      <h3>FOR ALL YOUR PLAYLIST NEEDS</h3>
       <h1>PLAYLIST</h1>
       <Switch>
         <Route

@@ -38,7 +38,7 @@ const Form = (props) => {
             />
             <br />
             <br />
-            <input type="submit" value="Add Song" />
+            <input style={{ color: 'pink', fontWeight: 'bold', backgroundColor: 'gray', border: 'gray' }} type="submit" value="Add Song" />
         </form>
     );
 };

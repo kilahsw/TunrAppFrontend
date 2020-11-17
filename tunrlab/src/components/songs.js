@@ -7,15 +7,16 @@ const Songs = (props) => {
             <>
                 {songs.map((song) => (
                     <div>
-                        <p>{song.title} by {song.artist}</p>
+                        <p style={{ fontWeight: 'bold', color: 'green' }}>{song.title} by {song.artist}</p>
                         <p>{song.time}</p>
-                        <button
+                        <button style={{ color: 'pink', fontWeight: 'bold', backgroundColor: 'gray', border: 'gray' }}
                             onClick={() => {
                                 props.favorites(song);
                             }}>
                             Favorite
                         </button>
-                        <button onClick={() => {
+                        <br />
+                        <button style={{ color: 'pink', fontWeight: 'bold', backgroundColor: 'gray', border: 'gray' }} onClick={() => {
                             props.deleteSong(song)
                         }}>Delete</button>
                     </div>
